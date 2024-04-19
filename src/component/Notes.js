@@ -50,11 +50,11 @@ const onChange=(e)=>{
             <form>
                     <div className="form-group mx-10">
                         <label htmlFor="etitle">Title</label>
-                        <input type="text" className="form-control" id="etitle" name="etitle" value={note.etitle} aria-describedby="emailHelp" onChange={onChange} />
+                        <input type="text" className="form-control" id="etitle" name="etitle" value={note.etitle} aria-describedby="emailHelp" onChange={onChange} minLength={5} required/>
                     </div>
                     <div className="form-group ">
                         <label htmlFor="edescription">Description</label>
-                        <input type="text" className="form-control" id="edescription" name="edescription" value={note.edescription} onChange={onChange} />
+                        <input type="text" className="form-control" id="edescription" name="edescription" value={note.edescription} onChange={onChange} minLength={5} required/>
                     </div>
                     <div className="form-group ">
                         <label htmlFor="etag">tag</label>
@@ -65,7 +65,7 @@ const onChange=(e)=>{
             </div>
             <div className="modal-footer">
               <button ref={refClose} type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" className="btn btn-primary" onClick={onClick}>Save changes</button>
+              <button disabled={note.etitle.length < 5 || note.edescription.length<5} type="button" className="btn btn-primary" onClick={onClick}>Save changes</button>
             </div>
           </div>
         </div>
@@ -73,6 +73,11 @@ const onChange=(e)=>{
 
       <div className="row my-3">
         <h2>your notes</h2>
+      
+         <div className="container mx-3">
+          {notes.length===0 && "No notes to display"}
+         </div>
+        
         {notes.map((note) => {
           return (
             <Noteitem key={note._id} updateNote={updateNote} note={note} />
