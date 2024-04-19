@@ -7,6 +7,7 @@ import NoteState from "./context/NoteState";
 function App() {
   return (
     <>
+     console.log("check")
       <NoteState>
         <Router>
           <div>
