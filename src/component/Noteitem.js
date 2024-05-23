@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import noteContext from '../context/noteContext'
+import"../style/Noteitem.css"
 
 const Noteitem = (props) => {
   const { note ,updateNote} = props;
@@ -7,7 +8,7 @@ const Noteitem = (props) => {
   const {deleteNote}=context
 
   return (
-    <div className="cold-md-3">
+    <div className="notes cold-md-3">
       <div className="card">
         <div className="card-body">
           <h5 className="card-title">{note.title}</h5>

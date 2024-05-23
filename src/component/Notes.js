@@ -3,6 +3,7 @@ import noteContext from "../context/noteContext";
 import Noteitem from "./Noteitem";
 import Addnote from "./Addnote";
 import { useNavigate } from "react-router-dom";
+import"../style/Notes.css"
 
 const Notes = () => {
   const navigate=useNavigate()
@@ -81,9 +82,9 @@ const onChange=(e)=>{
       </div>
 
       <div className="row my-3">
-        <h2>your notes</h2>
+        <h2 className="notesHeader">your notes</h2>
       
-         <div className="container mx-3">
+         <div className=" mx-3">
           {notes.length===0 && "No notes to display"}
          </div>
         

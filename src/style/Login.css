@@ -1,0 +1,37 @@
+.loginContainer{
+    width: 1000px;
+    margin-top: 50px !important;
+    display: flex !important;
+    justify-content: center !important;
+    border: 5px solid rgb(15, 124, 164);
+    border-radius: 10px !important;
+    height: 400px;
+    width: 500px;
+    margin-left:520px;
+}
+.headlogin{
+    margin-top: 20px;
+    padding: auto;
+    text-align: center;
+    text-decoration: underline;
+}
+.logininput{
+    width: 400px;
+}
+.loginform{
+    margin-top: 30px;
+}
+.LSubmit{
+    text-align: center;
+    margin-top: 20px;
+}
+.loginSubmit{
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+    border-radius: 5px;
+    background-color: rgb(53, 189, 230);
+}
+.loginSubmit:hover{
+    background-color: rgb(19, 112, 143);
+}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
+import "../style/Login.css"
 
 
 const Login = () => {
@@ -38,7 +39,31 @@ const Login = () => {
 
   return (
     <>
-    <div>
+
+    <div className="loginContainer">
+       <form onSubmit={handlesubmit}>
+       <div className="headlogin">
+        <h2>Login</h2>
+      </div>
+        <div className="loginform">
+          <label htmlFor="email">Email address</label>
+          <br />
+          <input type="email" className="logininput" id="email" name="email" value={credentials.email} onChange={onChange}  placeholder="Enter email" />
+        </div>
+        <div className="loginform">
+          <label htmlFor="password">Password</label>
+          <br />
+          <input type="password" className="logininput" id="password" name='password' value={credentials.password} onChange={onChange} placeholder="Password" />
+        </div>
+        <div className="LSubmit">
+        <button type="submit" className="loginSubmit" >Submit</button>
+
+        </div>
+      </form>
+    </div>
+
+
+    {/* <div>
     <form onSubmit={handlesubmit}>
         <div className="form-group">
           <label htmlFor="email">Email address</label>
@@ -53,7 +78,7 @@ const Login = () => {
         </div>
         <button type="submit" className="btn btn-primary" >Submit</button>
       </form>
-    </div>
+    </div> */}
     </>
   )
 }
