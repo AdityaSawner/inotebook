@@ -1,0 +1,38 @@
+.navbar-expand-lg{
+   background-color: black !important
+}
+.verify{
+    display: flex;
+    justify-content: flex-end !important;
+    
+}
+.btn-login{
+    display: inline ;
+    color: white !important;
+    font-weight: 500;
+    border: 2px solid rgb(50, 121, 132);
+    padding: 4px 4px;
+    margin-left: 1180px;
+    border-radius: 5px;
+    background-color: rgb(4, 82, 100);
+}
+.btn-signup{
+    display: inline;
+    color: white !important;
+    font-weight: 500;
+    border: 2px solid rgb(50, 121, 132);
+    border-radius:5px ;
+    margin-left: 15px;
+    padding: 4px 4px;
+    background-color: rgb(4, 82, 100);
+}
+.logout{
+    display: inline;
+    color: white !important;
+    font-weight: 500;
+    border: 2px solid rgb(50, 121, 132);
+    border-radius:5px ;
+    margin-left: 1220px;
+    padding: 4px 4px;
+    background-color: rgb(4, 82, 100);
+}
